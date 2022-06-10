@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Book Bazar</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      /* *{
+        margin: 0 auto;
+      } */
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      a:hover{
+        text-decoration: none;
+      }
+      .showbook{
+        display: flex;
+
+      }
+      .book{
+        margin-right: 20px;
+        padding-top: 10px;
+        position: relative;
+        z-index:1;
+        background-color: whitesmoke;
+      }
+      .book:hover{
+        transition: all .4s ease-out;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+      }
+      .ion {
+        position: absolute;
+        z-index: 2;
+        background: white;
+        width: 25px;
+        top:-1px;        
+        height: 25px;
+        opacity: 1;
+      }
+      .ion:hover{
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+      <header>
+        <div class="navbar bg-dark">       
+          <div  class="logo  justify-content-start">
+              <a href="/"><img src="img/logo.png" alt="logo" height="100px" width="150px"> </a>
+          </div>        
+          <div class=" justify-content-center">
+              <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-4 " type="search" placeholder="Search by Title, Author, Keyword or ISBN" aria-label="Search">
+                  <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+          </div>
+          <div class=" justify-content-end bg-light p-3 rounded-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+          </div>
+       </div>
+    
+        <div  >
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class=" navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="#">Textbooks</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Children's Books</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Novels</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <section class="container-fluid" >
+        <div class="homepic">
+          <img src="img/homepic.jpg" alt="homepic" width="100%" height="300px"> Where Book Comes to you
+        </div>
+        <div>
+          the main setion goes here
+
+          <div style="position: relative; overflow: hidden; width: auto; height: calc(8rem + 182px);">	
+            <div style="position: absolute; inset: 0px; overflow: scroll; margin-right: -17px; margin-bottom: -17px;">
+                <div class="showbook" style="width: 4080px;">
+                  
+                  <div class="book">
+                      <a href="#">
+                        <svg class="ion" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                        </svg>
+                      </a>
+                    <a href="#" aria-current="false">
+                      <div class=" ">
+                          <div class="bookimg" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 150px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="book">
+                    <a href="" aria-current="false">
+                      <div class=" ">
+                          <div class="" style="height: calc(3.5rem + 144px);overflow: hidden;">
+                              <img src="img/homepic.jpg" alt="" style="height: 100%;width: 140px;">
+                          </div>
+                          <div>
+                              <div> book name </div>
+                              <div> author </div>
+                              <div> prise </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+               
+                </div>	
+            </div>
+        </div>
+        </div>
+      </section>
+
+      <footer>
+        
+      </footer>
+
+
+
+
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+</body>
+</html>
