@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdditemController;
+use App\Http\Controllers\HomepageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,3 +40,4 @@ Route::group(['middleware' => 'auth'], function () {
 
 // Add Items
 Route::get('/add_item',[AdditemController::class, 'add_item_form']);
+Route::get('/homepage',[HomepageController::class, 'display'] );
